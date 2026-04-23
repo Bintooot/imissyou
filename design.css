@@ -1,0 +1,24 @@
+body {
+  font-family: sans-serif;
+  overflow: hidden;
+  background-color: black;
+  color: #ffffff;
+  font-size: 9rem;
+}
+
+.heading {
+  position: absolute;
+  white-space: nowrap;
+  animation: moveHeading 10s linear infinite;
+  transform: translate(100%, 0%);
+}
+
+@keyframes moveHeading {
+  0% {
+    right: -200%;
+  }
+
+  100% {
+    right: 400%;
+  }
+}
