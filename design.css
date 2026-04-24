@@ -170,6 +170,14 @@ section > p {
   animation: pop-up 1s ease-out;
 }
 
+section > p#name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--pink);
+  font-family: var(--body);
+  animation: pop-up 1s ease-out;
+}
+
 /* Divider */
 
 .divider {
