@@ -1,14 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="design.css">
-    <title>IMISSYOU</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="design.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Stay — A Letter For You</title>
+  </head>
 
-<body>
-    <h1 class="heading">I MISS YOU! &#x1F92D</h1>
-</body>
+  <body>
+    <main>
+      <!-- Header -->
+      <div>
+        <div class="divider-diamond">◆</div>
+        <div class="divider-diamond">◆</div>
+        <div class="divider-diamond">◆</div>
+      </div>
+      <header>
+        <h2>💌 I miss you so much</h2>
+      </header>
 
+      <!-- Floating Hearts -->
+      <div>
+        <p id="heart-1">❤️</p>
+        <p id="heart-2">🩷</p>
+        <p id="heart-3">❤️</p>
+        <p id="heart-4">🩷</p>
+        <p id="heart-5">❤️</p>
+        <p id="heart-6">🩷</p>
+      </div>
+
+      <!-- Hero Section -->
+      <section>
+        <h1>All I ask is<br /><em>Stay.</em></h1>
+        <p class="subtitle">Because life is so much better with you in it.</p>
+      </section>
+
+      <!-- Divider -->
+      <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-diamond">◆</div>
+        <div class="divider-line"></div>
+      </div>
+    </main>
+
+    <!-- Message Section -->
+    <section id="message">
+      <div>
+        <p>
+          <span>"</span> I know we can't be together right now, but I want you
+          to know that I'm always thinking of you. You mean the world to me, and
+          I can't wait until we can be together again. Until then, please take
+          care of yourself and know that I'm here for you no matter what.
+          <span>"</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-diamond">◆</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Reasons Section -->
+    <section id="reasons">
+      <h2 class="reasons-title">Why I need you to stay…</h2>
+      <div class="reasons-grid">
+        <div class="reason-card">
+          <span class="reason-icon">🌙</span>
+          <p>You make ordinary moments feel magical just by being in them.</p>
+        </div>
+
+        <div class="reason-card">
+          <span class="reason-icon">🫂</span>
+          <p>Your presence is the warmest place I have ever known.</p>
+        </div>
+
+        <div class="reason-card">
+          <span class="reason-icon">✨</span>
+          <p>You make me want to be a better person every single day.</p>
+        </div>
+
+        <div class="reason-card">
+          <span class="reason-icon">🏡</span>
+          <p>Wherever you are feels like home — and I need that feeling.</p>
+        </div>
+
+        <div class="reason-card">
+          <span class="reason-icon">💬</span>
+          <p>Talking to you is the best part of any day, every day.</p>
+        </div>
+
+        <div class="reason-card">
+          <span class="reason-icon">🌸</span>
+          <p>You bring color into a world that felt grey without you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-diamond">◆</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Promise Section -->
+    <section id="promise">
+      <h2 class="promise-title">What I promise you…</h2>
+      <ul class="promise-list">
+        <li>💛 To love you on the hard days, not just the easy ones.</li>
+        <li>💛 To always listen, even when I don't have the right words.</li>
+        <li>💛 To never take a single moment with you for granted.</li>
+        <li>💛 To be patient, kind, and endlessly here for you.</li>
+        <li>💛 To keep choosing you, every single day.</li>
+      </ul>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-diamond">◆</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Closing Section -->
+    <section id="closing">
+      <p class="closing-text">
+        Distance is just a test of how far love can travel.<br />
+        And mine travels all the way to you — every single day.
+      </p>
+      <p class="closing-signature">— Forever yours 💛</p>
+
+      <div class="closing-buttons">
+        <button class="btn-stay" onclick="handleStay()">I'll stay 💛</button>
+        <button class="btn-later" onclick="handleLater()">
+          I need a moment…
+        </button>
+      </div>
+    </section>
+
+    <!-- Response Overlay -->
+    <div id="response-overlay">
+      <div id="response-box">
+        <p id="response-emoji">💛</p>
+        <h2 id="response-title">Thank you for staying.</h2>
+        <p id="response-msg">
+          You have no idea how much this means. I'll spend every day making sure
+          you never regret it.
+        </p>
+        <button onclick="closeOverlay()">Close</button>
+      </div>
+    </div>
+
+    <script>
+      function handleStay() {
+        document.getElementById("response-emoji").textContent = "💍";
+        document.getElementById("response-title").textContent =
+          "You chose to stay. 💛";
+        document.getElementById("response-msg").textContent =
+          "You have no idea how much this means to me. I promise to spend every day making sure you never regret it.";
+        document.getElementById("response-overlay").style.display = "flex";
+      }
+
+      function handleLater() {
+        document.getElementById("response-emoji").textContent = "🌙";
+        document.getElementById("response-title").textContent =
+          "Take all the time you need.";
+        document.getElementById("response-msg").textContent =
+          "I'll be right here — loving you quietly, waiting patiently. No rush, no pressure. Just me, and my open heart.";
+        document.getElementById("response-overlay").style.display = "flex";
+      }
+
+      function closeOverlay() {
+        document.getElementById("response-overlay").style.display = "none";
+      }
+    </script>
+  </body>
 </html>
